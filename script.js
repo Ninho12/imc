@@ -3,26 +3,32 @@ function calcular(){
     var altura = document.getElementById('altura').value;
     var peso = document.getElementById('peso').value;
 
-    var imc;
-    imc = peso / altura * altura;
-    var texto = "";
+    altura = altura / 100;
 
-    if(imc > 18){
+    var imc;
+    imc = peso / (altura * altura);
+    var texto = "";
+   
+
+    if(imc > 10){
+        texto = "Você está muito macro!"
+    }
+    if(imc > 15){
         texto = "Você está macro!"
     }
-    else if(imc > 22){
+    if(imc > 18){
         texto = "Você está normal!"
     }
-    else if(imc > 25){
+    if(imc > 25){
         texto = "Você está gordo!"
     }
-    else if(imc > 28){
+    if(imc > 30){
         texto = "Você está muito gordo!"
     }
 
     var mensagem = document.getElementById("mensagem");
 
-    mensagem.textContent = "O seu imc: "+ +". "+ texto;
+    mensagem.textContent = "O seu imc: "+ imc.toFixed(2) +". "+ texto;
 
 
 }
