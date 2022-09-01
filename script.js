@@ -11,10 +11,10 @@ function calcular(){
    
 
     if(imc > 10){
-        texto = "Você está muito macro!"
+        texto = "Você está muito magro!"
     }
     if(imc > 15){
-        texto = "Você está macro!"
+        texto = "Você está magro!"
     }
     if(imc > 18){
         texto = "Você está normal!"
